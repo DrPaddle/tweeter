@@ -10,6 +10,7 @@ const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     markupArray.push(createTweetElement(tweet));
   }
+
   let contain = markupArray.join("");
   $("#tweets-container").append(contain);
 };
@@ -52,7 +53,16 @@ $(document).ready(function() {
   $(".textForm").submit(function(event) {
     alert("Handler for .submit() called.");
     event.preventDefault();
-    $.ajax("/tweets", {
+
+    if($(".textArea").val().length >140 ) {
+
+      alert("tweet too long")
+      
+    } else if ($(".textArea").val().length === 0 || $(".textArea").val() === null || $(".textArea").val() === "" ) {
+      alert("Nothing Entered")
+    } else {
+
+      $.ajax("/tweets", {
       method: "POST",
       data: $(this).serialize()
     })
@@ -60,6 +70,10 @@ $(document).ready(function() {
       console.log('Success: ', response);
       console.log($(event).serialize());
     }) 
+  }
+
+
+    
   });
 
 const loadTweets = function() {

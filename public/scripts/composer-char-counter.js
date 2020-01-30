@@ -1,13 +1,6 @@
 $(document).ready(function() {
 
-  console.log("Is this working?")
-
-  $(".textForm").on("keypress", function(e) {
-    //console.log(e)
-    
-    //console.log(this.text.value);
-    //console.log(this.text.value.length);
-  })
+  console.log("Character Counter is ON")
 
   $(".textForm").on("input", function() {
     let count = this.text.value.length;
