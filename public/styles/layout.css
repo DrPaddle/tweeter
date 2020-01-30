@@ -10,16 +10,75 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;  
+  height: 500px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+.container {
+  position: relative;
+  background-color: #f4f1ec;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.new-tweet{
+  padding: 20px;
+}
+
+article.tweet {
+  padding: 10px;
+  border: 3px solid black;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+article:hover{
+  box-shadow: 5px 5px gold;
+}
+
+.tweetHeader{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.userInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+article.tweet .handle{
+  color: lightgray
+}
+
+article.tweet .actualTweet {
+  padding: 10px;
+  border-bottom: 5px solid black;
+}
+
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 10px;
+  font-family: 'Source Sans Pro', sans-serif;  
+
+}
+
+.tweet .tweetHeader .userInfo .userAvatar{
+
+  width: 30px;
+  height: 30px; 
+}

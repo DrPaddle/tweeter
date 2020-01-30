@@ -1,0 +1,17 @@
+#mainHeader {
+margin-top: 120px;
+height: 400px;
+width: 100%;
+background-color: peru;
+text-align: center;
+z-index: 9;
+background-color: #007a74;
+background-image: url("https://www.transparenttextures.com/patterns/honey-im-subtle.png");
+}
+
+.center {
+  text-align: center;
+}
+
+
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
