@@ -16,6 +16,12 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;  
   height: 500px;
+  display: grid;
+  grid-template-rows: 120px 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'nav' 'header' 'main';
+  
+
 }
 
 
@@ -24,11 +30,16 @@ body {
   background-color: #f4f1ec;
   width: 90%;
   margin: 0 auto;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
 }
 
 .new-tweet{
   padding: 20px;
 }
+
+
 
 article.tweet {
   padding: 10px;
@@ -112,4 +123,28 @@ body#titleBar .toggleButton {
 #error{
   color:#D8000C;
   display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .userIMG {
+    display: flex;
+    justify-content: left;
+  }
+
+  .container {
+    grid-area: tweets;
+    display: flex;
+    justify-content: right;
+
+  }
+
+  body {
+    grid-template-rows: 120px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'nav nav' 'profile tweets';
+    
+  }
+
+
 }

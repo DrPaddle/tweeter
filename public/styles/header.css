@@ -7,11 +7,17 @@ text-align: center;
 z-index: 9;
 background-color: #007a74;
 background-image: url("https://www.transparenttextures.com/patterns/honey-im-subtle.png");
+grid-area: header;
 }
 
 .center {
   text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+  #mainHeader {
+    grid-area: profile;
+  }
+}
 
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
