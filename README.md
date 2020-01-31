@@ -7,10 +7,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Desktop View with compose tweets present"](docs/Desktop View.png)
-!["Desktop View without Compose Tweets"](docs/desktop without compose.png)
-!["Mobile View with Compose"](docs/Mobile  with Compose.png)
-!["Mobile View without Compose Tweets"](docs/Mobile Without compose.png)
+!["Desktop View with compose tweets present"](https://github.com/DrPaddle/tweeter/blob/master/docs/Desktop%20View.png)
+!["Desktop View without Compose Tweets"](https://github.com/DrPaddle/tweeter/blob/master/docs/desktop%20without%20compose.png)
+!["Mobile View with Compose"](https://github.com/DrPaddle/tweeter/blob/master/docs/Mobile%20%20with%20Compose.png)
+!["Mobile View without Compose Tweets"](https://github.com/DrPaddle/tweeter/blob/master/docs/Mobile%20Without%20compose.png)
 
 ## Getting Started
 
