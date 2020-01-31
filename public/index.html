@@ -37,8 +37,16 @@
 
   <body>
     <nav>
+      <div id="titleBar"> 
       <span>tweeter</span>
+        <div class="toggleButton"><strong>Write</strong> a new tweet</div>
+      </div>
+      <div class="undertogglebutton"> 
+        <img class="toggleArrows" src="/images/arrow.gif">
+    </div>
+     
     </nav>
+
 
     <header id="mainHeader">
 
@@ -66,6 +74,8 @@
             <span class="counter">140</span>
           </div>
         </form>
+
+        <div id="error">Error you can't have a tweet with more than 140 characters or it being empty</div>
       </section>
 
       <section id="tweets-container"> 

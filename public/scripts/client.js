@@ -4,6 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const renderTweets = function(tweets) {
   let markupArray = [];
 
@@ -11,8 +17,8 @@ const renderTweets = function(tweets) {
     markupArray.push(createTweetElement(tweet));
   }
 
-  let contain = markupArray.join("");
-  $("#tweets-container").append(contain);
+  let contain = markupArray.reverse().join("");
+  $("#tweets-container").prepend(contain);
 };
 
 const createTweetElement = function(data) {
@@ -28,7 +34,7 @@ const createTweetElement = function(data) {
   </header>
 
     <div class="actualTweet">
-    ${data.content.text}
+    ${escape(data.content.text)}
     </div>
 
 
@@ -51,15 +57,24 @@ $(document).ready(function() {
  
 
   $(".textForm").submit(function(event) {
-    alert("Handler for .submit() called.");
+    // alert("Handler for .submit() called.");
     event.preventDefault();
 
     if($(".textArea").val().length >140 ) {
 
-      alert("tweet too long")
-      
+      $('#error').slideToggle("slow")
+      setTimeout(() => {
+        $('#error').slideToggle("slow")
+      },6000)
+
+
     } else if ($(".textArea").val().length === 0 || $(".textArea").val() === null || $(".textArea").val() === "" ) {
-      alert("Nothing Entered")
+
+      $('#error').slideToggle("slow")
+      setTimeout(() => {
+        $('#error').slideToggle("slow")
+      },6000)
+      
     } else {
 
       $.ajax("/tweets", {
@@ -69,25 +84,34 @@ $(document).ready(function() {
     .then(function(response) {
       console.log('Success: ', response);
       console.log($(event).serialize());
+      loadTweets()
+      $(".textArea").val("");
+      $('.counter').text(140);
     }) 
   }
-
-
-    
-  });
+  
+});
 
 const loadTweets = function() {
-    $.ajax("/tweets", { 
-      method: "GET" 
-    })
-    .then( response => {
-      renderTweets(response);
+  $.ajax("/tweets", { 
+    method: "GET" 
+  })
+  .then( response => {
+    $('#tweets-container').empty(); 
+    renderTweets(response);
     })
   };
 loadTweets();
+
+
+  $('.toggleArrows').click(function(){
+    $('.new-tweet').slideToggle("slow", function(){
+      console.log("animation COmplete");
+    })
+
+  })
+
+
+
+
 });
-
-
-
-
-

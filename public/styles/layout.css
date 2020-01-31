@@ -35,6 +35,7 @@ article.tweet {
   border: 3px solid black;
   padding-top: 5px;
   margin-bottom: 10px;
+  overflow-wrap: break-word;
 }
 
 article:hover{
@@ -81,4 +82,34 @@ article.tweet footer {
 
   width: 30px;
   height: 30px; 
+}
+
+ #titleBar{
+
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+
+body#titleBar .toggleButton {
+  font-size: 20px;
+  
+}
+
+.toggleArrows {
+ 
+  width: 20px;
+  height: 25px;
+  
+}
+
+.undertogglebutton {
+  text-align: right;
+  padding-right: 86px;
+}
+
+#error{
+  color:#D8000C;
+  display: none;
 }
