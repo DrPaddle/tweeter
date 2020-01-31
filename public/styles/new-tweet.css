@@ -1,24 +1,17 @@
  .new-tweet h2 {
-
   text-align: center;
 } 
-
 
 .new-tweet form textarea {
 
   width: 100%;
   border: none;
   border-bottom: black 5px solid;
-
 }
 
-
-
 .underTextBox {
-
   display: flex;
   justify-content: space-between;
- 
 }
 
 

@@ -1,15 +1,11 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
+// cross site verification 
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
 
+// push the tweets to append
 const renderTweets = function(tweets) {
   let markupArray = [];
 
@@ -21,6 +17,7 @@ const renderTweets = function(tweets) {
   $("#tweets-container").prepend(contain);
 };
 
+// mockup of the articles to be replaced
 const createTweetElement = function(data) {
   const markup = `
   <article class="tweet"> 
@@ -53,9 +50,8 @@ const createTweetElement = function(data) {
   return markup;
 };
 
+// waiting for the document to be ready
 $(document).ready(function() {
- 
-
   $(".textForm").submit(function(event) {
     // alert("Handler for .submit() called.");
     event.preventDefault();
@@ -103,17 +99,10 @@ const loadTweets = function() {
   };
 loadTweets();
 
-
   $('.toggleArrows').click(function(){
     $('.new-tweet').slideToggle("slow", function(){
       console.log("animation COmplete");
       $('.textArea').focus()
     })
-
-
   })
-
-
-
-
 });

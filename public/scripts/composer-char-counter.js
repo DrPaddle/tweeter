@@ -1,7 +1,5 @@
+// This function will count the characters and change it from red to black
 $(document).ready(function() {
-
-  console.log("Character Counter is ON")
-
   $(".textForm").on("input", function() {
     let count = this.text.value.length;
     let remaining = 140 - count;
@@ -12,16 +10,10 @@ $(document).ready(function() {
       $(".counter").css({"color": "red"})
     } else {
       $(".counter").css({"color": "black"})
-    }
-       
+    }  
+    // Send the remining characters to the counter class in html document
     $(".counter").text(remaining);
-    
-
-
   })
-
-
-  
 });
 
 
