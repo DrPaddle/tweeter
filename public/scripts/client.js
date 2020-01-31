@@ -107,7 +107,9 @@ loadTweets();
   $('.toggleArrows').click(function(){
     $('.new-tweet').slideToggle("slow", function(){
       console.log("animation COmplete");
+      $('.textArea').focus()
     })
+
 
   })
 

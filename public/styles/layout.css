@@ -20,8 +20,6 @@ body {
   grid-template-rows: 120px 1fr 1fr;
   grid-template-columns: 1fr;
   grid-template-areas: 'nav' 'header' 'main';
-  
-
 }
 
 
@@ -37,9 +35,8 @@ body {
 
 .new-tweet{
   padding: 20px;
+  display: none;
 }
-
-
 
 article.tweet {
   padding: 10px;
@@ -49,8 +46,17 @@ article.tweet {
   overflow-wrap: break-word;
 }
 
+.icons{
+  opacity: 0;
+}
+
+
 article:hover{
   box-shadow: 5px 5px gold;
+}
+
+article:hover .icons {
+  opacity: 1;
 }
 
 .tweetHeader{
@@ -85,8 +91,7 @@ article.tweet footer {
   justify-content: space-between;
   padding: 10px;
   font-size: 10px;
-  font-family: 'Source Sans Pro', sans-serif;  
-
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .tweet .tweetHeader .userInfo .userAvatar{
@@ -125,11 +130,16 @@ body#titleBar .toggleButton {
   display: none;
 }
 
+.userIMG {
+  padding-top: 15px;;
+}
+
+
 
 @media screen and (min-width: 1024px) {
   .userIMG {
     display: flex;
-    justify-content: left;
+    justify-content: center;
   }
 
   .container {
@@ -146,5 +156,8 @@ body#titleBar .toggleButton {
     
   }
 
-
+  #mainHeader{
+    max-width: 60vw;
+    margin-left: 20px;;
+  }
 }
